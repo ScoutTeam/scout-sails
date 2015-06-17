@@ -13,6 +13,9 @@ RUN #!/bin/bash source ~/.bashrc
 #update npm
 RUN sudo npm install npm -g
 
+#expose ports
+EXPOSE 1337
+
 #install sails
 RUN sudo npm -g install sails 
 
