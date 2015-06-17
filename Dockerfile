@@ -20,4 +20,4 @@ EXPOSE 1337
 RUN sudo npm -g install sails 
 
 #command to run container (after -v should be replaced with developer's path to sails app)
-#docker run -i -t --rm -p 1337:1337 -v /Users/montylennie/Documents/Scout/scout-sails/:/scout-sails mlennie/scout-sails bash
+#docker run -i -t -p 1337:1337 --link mongo:MONGODB -v /Users/montylennie/Documents/Scout/scout-sails/:/scout-sails mlennie/scout-sails bash
