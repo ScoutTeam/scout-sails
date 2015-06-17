@@ -1,3 +1,5 @@
+var IP = process.env.MONGODB_PORT_27017_TCP_ADDR;
+var MONGOPORT = process.env.MONGODB_PORT_27017_TCP_PORT;
 /**
  * Connections
  * (sails.config.connections)
@@ -56,13 +58,11 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  someMongodbServer: {
+
+  MongoDb: {
     adapter: 'sails-mongo',
-    host: 'localhost',
-    port: 27017,
-    // user: 'username',
-    // password: 'password',
-    // database: 'your_mongo_db_name_here'
+    url : 'mongodb://' + IP + ':' + MONGOPORT + '/' + 'scoutDev',
+    port: process.env.PORT || 1337  
   },
 
   /***************************************************************************

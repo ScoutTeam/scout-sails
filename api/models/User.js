@@ -9,6 +9,14 @@ module.exports = {
 
   attributes: {
 
+  	// Primitive Attributes
+  	firstName: {
+  		type: 'string'
+  	},
+  	lastName: {
+  		type: 'string'
+  	}
+
   }
 };
 
